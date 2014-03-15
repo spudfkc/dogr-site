@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<h1>{{ comic.title }}</h1>
+<h2>{{ comic.created }}</h2>
+
+<img src="{% static comic_img %}">{{ comic.text }}</img>
+
+<div>
+  {% if comic_comments %}
+    <div>
+        {% for comment in comic_comments %}
+        <div>{{ comment.author }}</div>
+        <div>{{ comment.created_on }}</div>
+        <div>{{ comment.text }}</div>
+        <br>
+        {% endfor %}
+    </div>
+  {% else %}
+    <div>
+        No Comments for this Comic.
+    </div>
+  {% endif %}
+</div>

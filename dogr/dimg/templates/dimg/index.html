@@ -1,0 +1,10 @@
+{% if latest_entry_list %}
+  <h1>Comics</h1>
+  <ul>
+    {% for entry in latest_entry_list %}
+    <li><a href="/dimg/{{ entry.id }}/">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No Entries.</p>
+{% endif %}
