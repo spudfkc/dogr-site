@@ -1,1 +1,1 @@
-Scratch project for playing with NodeJS/Express
+Scratch project for playing with Django
